@@ -18,6 +18,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <!---- start-smoth-scrolling---->
 <script type="text/javascript" src="<?= $home;?>/js/move-top.js"></script>
+<script type="text/javascript" src="<?= $home;?>/js/customJs.js"></script>
 <script type="text/javascript" src="<?= $home;?>/js/easing.js"></script>
 <script type="text/javascript">
             jQuery(document).ready(function($) {
@@ -41,10 +42,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <ul class="navig">
                     <li><a class="active" href="<?=home_url();?>">Início</a><span> </span></li>
                     <li><a href="<?=home_url();?>/sobre">Sobre</a><span> </span></li>
-                    <li><a href="blog.html">Blog</a><span> </span></li>
-                    <li><a href="pages.html">Pages</a><span> </span></li>
-                    <li><a href="gallery.html">Gallery</a><span> </span></li>
-                    <li><a href="contact.html">Contact</a><span> </span></li>
+                    <li><a href="<?=home_url();?>/blog">Blog</a><span> </span></li>
+                    <li><a href="<?=home_url();?>/fotos">Fotos</a><span> </span></li>
+                    <li><a href="<?=home_url();?>/contatos">Contatos</a><span> </span></li>
                 </ul>
             </div>
                  <!-- script-for-menu -->

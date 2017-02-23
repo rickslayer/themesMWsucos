@@ -43,7 +43,7 @@
                         <ul class="social-icons">
                             <li><a href="#"><span class="facebook"> </span></a></li>
                             <li><a href="#"><span class="twitter"> </span></a></li>
-                            <li><a href="#"><span class="thumb"> </span></a></li>
+                            <li><a href="#"><span class="instagram"> </span></a></li>
                         </ul>
                     </div>
                 </div>

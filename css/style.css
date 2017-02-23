@@ -1,9 +1,4 @@
-/*--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
---*/
+
 html, body{
 	font-family: 'Open Sans Condensed', sans-serif;
     font-size: 100%;
@@ -18,7 +13,7 @@ body a{
 	-ms-transition: 0.5s all ease;
 }
 p{
-	
+
 		padding:0 ;
 	margin: 0;
 }
@@ -84,7 +79,7 @@ ul.navig li a:after{
 	content:"";
 	position:absolute;
 	top:0;
-	
+
 }
 .head_grid{
 	text-align:center;
@@ -137,7 +132,7 @@ ul.navig li a:after{
 @media (max-width: 768px){
 span.menu:before {
 	content: url(../images/nav-icon.png);
-	cursor: pointer;	
+	cursor: pointer;
 	height:32px;
 }
 ul.navig {
@@ -345,7 +340,7 @@ width: 100%;
 ul.callbacks_tabs.callbacks2_tabs {
 	display: block;
 }
-/*--Slider-Part-Ends-Here--*/	
+/*--Slider-Part-Ends-Here--*/
 /*--banner-Part-Ends-Here --*/
 /*--slide-hover-img--*/
 .welcome-bottom-info {
@@ -458,7 +453,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 	padding: 20px;
 	color: #fff;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
-} 
+}
 
 .ia-container input:checked + figcaption,
 .ia-container input:checked:hover + figcaption{
@@ -471,11 +466,11 @@ ul.callbacks_tabs.callbacks2_tabs {
     -o-transition: all 0.4s ease-in-out 0.5s;
     -ms-transition: all 0.4s ease-in-out 0.5s;
     transition: all 0.4s ease-in-out 0.5s;
-	
+
 	-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=99)";
     filter: alpha(opacity=99);
 	opacity: 1;
-	
+
 	top: 50%;
 }
 
@@ -496,52 +491,52 @@ ul.callbacks_tabs.callbacks2_tabs {
 }
 
 @media screen and (max-width: 720px) {
-    .ia-container { 
-		width: 540px; 
+    .ia-container {
+		width: 540px;
 	}
-	
-	.ia-container figure { 
-		left: 40px; 
-		width: 260px; 
+
+	.ia-container figure {
+		left: 40px;
+		width: 260px;
 	}
-	
-	.ia-container input { 
-		width: 40px; 
+
+	.ia-container input {
+		width: 40px;
 	}
-	
-	.ia-container input:checked ~ figure { 
-		left: 260px; 
+
+	.ia-container input:checked ~ figure {
+		left: 260px;
 	}
-	
-	.ia-container figcaption span { 
-		font-size: 16px; 
+
+	.ia-container figcaption span {
+		font-size: 16px;
 	}
 }
 
 @media screen and (max-width: 520px) {
-    .ia-container { 
-		width: 320px; 
+    .ia-container {
+		width: 320px;
 	}
-	
-	.ia-container figure { 
-		left: 20px; 
-		width: 180px; 
+
+	.ia-container figure {
+		left: 20px;
+		width: 180px;
 	}
-	
-	.ia-container input { 
-		width: 20px; 
+
+	.ia-container input {
+		width: 20px;
 	}
-	
-	.ia-container input:checked ~ figure { 
-		left: 180px; 
+
+	.ia-container input:checked ~ figure {
+		left: 180px;
 	}
-	
-	.ia-container figcaption span { 
-		font-size: 12px; 
-		letter-spacing: 2px; 
-		padding: 10px; 
-		margin-top: -20px; 
-	} 
+
+	.ia-container figcaption span {
+		font-size: 12px;
+		letter-spacing: 2px;
+		padding: 10px;
+		margin-top: -20px;
+	}
 
 }
 /*--/slide-hover-img--*/
@@ -637,7 +632,7 @@ ul.callbacks_tabs.callbacks2_tabs {
   background: #242425;
 }
 /*--offer-Part-end-Here--*/
-/*--nature-Part-start-Here--*/	
+/*--nature-Part-start-Here--*/
 .nature{
 	background:url(../images/nature.jpg) no-repeat;
 	min-height:270px;
@@ -1716,7 +1711,7 @@ h3.ghj {
 	.col-md-5.blog-one-left {
 		width: 43%;
 		float: left;
-	}	
+	}
 	.col-md-7.blog-one-left {
 		width: 57%;
 		float: right;
@@ -1742,7 +1737,7 @@ h3.ghj {
 	}
 	.blog-right ul li {
 	  margin-bottom: 5px;
-	}	
+	}
 	.pager li > a, .pager li > span {
 	  padding: 4px 21px;
 	  font-size: 14px;
@@ -2054,7 +2049,7 @@ h3.ghj {
 	.b-btn a {
 		padding: 2px 6px;
 		font-size: 11px;
-	}	
+	}
 	.blog-one p {
 		  font-size: 15px;
 	}
