@@ -36,21 +36,21 @@
                     <div class="col-md-3 footer-grid contact-grid">
                         <h4>Contact us</h4>
                         <ul>
-                            <li><span class="c-icon"> </span>Newyork Still Road.</li>
-                            <li><span class="c-icon1"> </span><a href="mailto:info@example.com">mail@example.com</a></li>
-                            <li><span class="c-icon2"> </span>756 gt globel Place</li>
+                            <li><span class="c-icon"> </span>Rua Ceará, 135 - Jardim Planalto - Arujá/SP</li>
+                            <li><span class="c-icon1"> </span><a href="mailto:contato@mwsucos.com.br">contato@mwsucos.com.br</a></li>
+                            <li><span class="c-icon2"> </span>(11) 97508-5586</li>
                         </ul>
                         <ul class="social-icons">
-                            <li><a href="#"><span class="facebook"> </span></a></li>
+                            <li><a href="http://facebook.com/mwsucos"><span class="facebook"> </span></a></li>
                             <li><a href="#"><span class="twitter"> </span></a></li>
-                            <li><a href="#"><span class="instagram"> </span></a></li>
+                            <li><a href="http://instagram.com/mwsucos"><span class="instagram"> </span></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
             <div class="copy">
-                      <p>© <?= the_time('Y');?> by <?php bloginfo('name'); ?> </p>
+                      <p>© <?= the_time('Y');?> by <?php bloginfo('name'); ?>  </p>
                     </div>
     <!--/footer-->
         <script type="text/javascript">

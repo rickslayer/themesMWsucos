@@ -1,4 +1,4 @@
-  <?php get_header();?>
+ <?php get_header();?>
  <?php $home = get_template_directory_uri(); ?>
   <div class="banner" id="home">
         <section class="slider">
@@ -89,8 +89,8 @@
             <!--End-slider-script-->
 <div class="welcome">
     <div class="container">
-        <h4>Welcome To Our Salads</h4>
-        <p>Ambrosia is a variation on the traditional fruit salad. Most ambrosia recipes contain fresh or sweetened pineapple, mandarin oranges or fresh orange sections, miniature marshmallows,[1] and coconut.[2]</p>
+        <h4>Bem vindo ao nosso mundo de sucos</h4>
+        <p>Conheça o suco Lua, um suco para você começar a semana com todo o gás. Curioso? Conheça também os sucos Sol, Marte, Saturno etc.</p>
     </div>
 </div>
 <div class="welcome-bottom">

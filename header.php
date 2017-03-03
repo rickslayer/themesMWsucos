@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+ <?php wp_head(); ?>
 <?php $home = get_template_directory_uri(); ?>
 <meta charset="utf-8">
- <?php wp_head(); ?>
 <title> <?php geraTitle();?></title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -28,6 +28,17 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 });
             });
         </script>
+<!--Google Analytics-->
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-92884277-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
 <!---- start-smoth-scrolling---->
 </head>
 <body>
@@ -40,7 +51,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="navigation">
              <span class="menu"></span>
                 <ul class="navig">
-                    <li><a class="active" href="<?=home_url();?>">Início</a><span> </span></li>
+                    <li><a href="<?=home_url();?>">Início</a><span> </span></li>
                     <li><a href="<?=home_url();?>/sobre">Sobre</a><span> </span></li>
                     <li><a href="<?=home_url();?>/blog">Blog</a><span> </span></li>
                     <li><a href="<?=home_url();?>/fotos">Fotos</a><span> </span></li>
