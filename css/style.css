@@ -725,6 +725,7 @@ ul.social-icons{
 }
 ul.social-icons li{
 	display:inline-block;
+	padding:5px;
 }
 ul.social-icons li a span{
 	width:32px;
@@ -1035,7 +1036,7 @@ span.glyphicon {
   color: #ff6c2c;
 }
 .pager li > a, .pager li > span {
-  border-radius: 15px;
+
   color: #353a3d;
 }
 .blog-main p {
@@ -1740,7 +1741,7 @@ h3.ghj {
 	}
 	.pager li > a, .pager li > span {
 	  padding: 4px 21px;
-	  font-size: 14px;
+	  font-size: 20px;
 	}
 	.ch-grid li {
 	  margin: 0 8px !important;
@@ -2643,7 +2644,7 @@ h3.ghj {
 	}
 	.pager li > a, .pager li > span {
 	  padding: 2px 15px;
-	  font-size: 12px;
+	  font-size: 15px;
 	}
 	.logo {
 	left: 5%;

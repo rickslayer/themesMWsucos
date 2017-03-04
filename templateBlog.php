@@ -5,9 +5,7 @@
             $("#blog a").addClass("active");
     });
 </script>
-<div class="banner banner5" id="home">
-
-            </div>
+<div class="banner banner5" id="home"> </div>
     <!--blog-->
     <div class="blog">
         <div class="container">
@@ -18,14 +16,7 @@
                <div class="col-md-9 blog-left">
 
                                 <?php
-
-                                    $args = array (
-                                    'post_type'   => 'post',
-                                    'post_status' => 'publish',
-                                    );
-                                    $resp = get_posts($args);
-
-                                   foreach ($resp as $key) {
+/*
                                        $idpost   = $key->ID;
                                        $iduser   = $key->post_author;
                                        $conteudo = $key->post_content;
@@ -38,8 +29,41 @@
                                        $comentarios = $key->comment_count;
                                        $dataPublicacao = $key->post_date;
                                        $dataPublicacao = date("d/m/Y");
-
+*/
                                        ?>
+                   <?php
+                   $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+                   $typePost = 'publish';
+                   $numeroPost = '5';
+                   // the query
+                   $the_query = new WP_Query( 'posts_per_page=' .$numeroPost.
+                                              '&post_status=' .$typePost.
+                                              '&paged=' . $paged );
+                   ?>
+
+                   <?php if ( $the_query->have_posts() ) : ?>
+                       <?php
+
+                       while ( $the_query->have_posts() ) : $the_query->the_post();
+                           ?>
+                           <?php
+                           $idPost   =  get_the_ID();
+                           $resp     = get_posts($idPost);
+                           $conteudo = get_the_content();
+                           $conteudo = substr($conteudo, 0,600);
+                           $titulo   = get_the_title();
+                           $titulo   = strtoupper($titulo);
+                           $link     = get_permalink($idPost);
+                           $comentarios = $resp[0]->comment_count;
+                           $idUser      = $resp[0]->post_author;
+                           $user        = get_user_by('ID', $idUser );
+                           $dataPublicacao = $resp[0]->post_date;
+                           $dataPublicacao = date("d/m/Y");
+                           ?>
+
+
+
+
                         <div class="blog-main">
                                     <a href="<?=$link ;?>" class="bg"><?= $titulo; ?></a>
                                        <p><a href="#"><?= $comentarios; ?>  Comentários</a></p>
@@ -47,7 +71,7 @@
                         <div class="blog-main-one">
                         <div class="blog-one">
                             <div class="col-md-5 blog-one-left">
-                                <a href="single.html"><img src="images/blog-2.jpg" alt="" /></a>
+                                <a href="<?=$link ;?>"> <?php the_post_thumbnail(); ?></a>
                             </div>
                             <div class="col-md-7 blog-one-left">
                                    <p> <?= $conteudo; ?> ... </p>
@@ -69,10 +93,9 @@
 
 
 
-                                   <?php }
+                       <?php endwhile; ?>
 
-                                      ?>
-
+                   <?php endif; ?>
 
 
                 </div>
@@ -133,9 +156,12 @@
             <div class="pagination">
                 <nav>
                     <ul class="pager">
-                        <li><a href="#">Previous</a></li>
-                        <li><a href="#">Next</a></li>
+                        <li><?= previous_posts_link( 'Anterior', 5 ); ?></li>
+                        <li><?= next_posts_link( 'Próxima', 5 ); ?></li>
                     </ul>
+                    <?php
+                    wp_reset_postdata();
+                    ?>
                 </nav>
             </div>
         </div>

@@ -36,9 +36,9 @@
                             <li><span class="c-icon2"> </span>(11) 97508-5586</li>
                         </ul>
                         <ul class="social-icons">
-                            <li><a href="http://facebook.com/mwsucos"><span class="facebook"> </span></a></li>
-                            <li><a href="#"><span class="twitter"> </span></a></li>
-                            <li><a href="http://instagram.com/mwsucos"><span class="instagram"> </span></a></li>
+                            <li><a href="http://facebook.com/mwsucos" target="_blank"><i class="fa fa-facebook fa-2x" aria-hidden="true"></i></a></li>
+                            <li><a href="http://youtube.com/mwsucos" target="_blank"><i class="fa fa-youtube fa-2x" aria-hidden="true"></i></a></li>
+                            <li><a href="http://instagram.com/mwsucos" target="_blank"><i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
- <?php wp_head(); ?>
+<?php wp_head(); ?>
 <?php $home = get_template_directory_uri(); ?>
 <meta charset="utf-8">
 <title> <?php geraTitle();?></title>
@@ -16,7 +16,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 <script src="<?= $home;?>/js/jquery-1.11.0.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<!---- start-smoth-scrolling---->
+    <link rel="stylesheet" href="<?= $home;?>/frames/font-awesome/css/font-awesome.min.css">
 <script type="text/javascript" src="<?= $home;?>/js/move-top.js"></script>
 <script type="text/javascript" src="<?= $home;?>/js/customJs.js"></script>
 <script type="text/javascript" src="<?= $home;?>/js/easing.js"></script>
@@ -27,7 +27,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
                 });
             });
-        </script>
+</script>
 <!--Google Analytics-->
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
