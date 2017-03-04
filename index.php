@@ -1,5 +1,12 @@
+<?php /*Template Name: templateInicio*/ ?>
  <?php get_header();?>
+
  <?php $home = get_template_directory_uri(); ?>
+ <script type="text/javascript">
+       $(function(){
+            $("#inicio a").addClass("active");
+    });
+ </script>
   <div class="banner" id="home">
         <section class="slider">
              <!--   <div class="flexslider">
@@ -89,8 +96,9 @@
             <!--End-slider-script-->
 <div class="welcome">
     <div class="container">
-        <h4>Bem vindo ao nosso mundo de sucos</h4>
-        <p>Conheça o suco Lua, um suco para você começar a semana com todo o gás. Curioso? Conheça também os sucos Sol, Marte, Saturno etc.</p>
+    <?php $resp = getDadosPostInterno('internobemvindos'); ?>
+         <h4><?= $resp[0]->post_title;?></h4>
+        <p><?= $resp[0]->post_content;?></p>
     </div>
 </div>
 <div class="welcome-bottom">
@@ -102,36 +110,36 @@
                     <figure>
                         <img src="<?=$home;?>/images/port-1.jpg" alt="image01" />
                         <input type="radio" name="radio-set" checked="checked"/>
-                        <figcaption><span>Juicy Fruit Salad</span></figcaption>
+                        <figcaption><span>Suco Lua</span></figcaption>
                         <figure>
                             <img src="<?=$home;?>/images/port-2.jpg" alt="image02" />
                             <input type="radio" name="radio-set" />
-                            <figcaption><span>Fabulous Fruit Salad</span></figcaption>
+                            <figcaption><span>Suco Marte</span></figcaption>
                             <figure>
                                 <img src="<?= $home;?>/images/port-3.jpg" alt="image03" />
                                 <input type="radio" name="radio-set" />
-                                <figcaption><span>Blueberry Salad</span></figcaption>
+                                <figcaption><span>Suco Mercúrio</span></figcaption>
                                 <figure>
                                     <img src="<?= $home;?>/images/port-4.jpg" alt="image04" />
                                     <input type="radio" name="radio-set" />
-                                    <figcaption><span>Apple Salad</span></figcaption>
+                                    <figcaption><span>Suco Júpiter</span></figcaption>
                                     <figure>
                                         <img src="<?= $home;?>/images/port-5.jpg" alt="image05" />
                                         <input type="radio" name="radio-set" />
-                                        <figcaption><span>Strawberry Salad</span></figcaption>
+                                        <figcaption><span>Suco Vênus</span></figcaption>
                                         <figure>
                                             <img src="<?= $home;?>/images/port-6.jpg" alt="image06" />
                                             <input type="radio" name="radio-set" />
-                                            <figcaption><span>Orange Salad</span></figcaption>
+                                            <figcaption><span>Suco Saturno</span></figcaption>
                                             <figure>
                                                 <img src="<?= $home;?>/images/port-7.jpg" alt="image07" />
                                                 <input type="radio" name="radio-set" />
-                                                <figcaption><span>Mango Cashew Salad</span></figcaption>
-                                                <figure>
+                                                <figcaption><span>Suco Sol</span></figcaption>
+                                                <!--<figure>
                                                     <img src="<?= $home;?>/images/port-8.jpg" alt="image08" />
                                                     <input id="ia-selector-last" type="radio" name="radio-set" />
                                                     <figcaption><span>Green Grape Salad</span></figcaption>
-                                                </figure>
+                                                </figure>-->
                                             </figure>
                                         </figure>
                                     </figure>
@@ -143,13 +151,9 @@
             </section>
             </div>
                 <div class="col-md-4 slit-slider-text">
-                    <h4>Vitae elementum diam molestie</h4>
-                    <p>Maecenas interdum augue eget elit interdum, vitae elementum diam molestie.
-                        Nulla facilisi.Phasellus tempor erat id erat gravida pulvinar. Aenean est felis,
-                         ullamcorper et volutpat sed, cursus at enim. Vestibulum vel finibus neque. In
-                         sed magna tellus.Phasellus tempor erat id erat gravida pulvinar. Aenean est felis,
-                         ullamcorper et volutpat sed, cursus at enim. Vestibulum vel finibus neque. In
-                         sed magna tellus</p>
+                    <h4>Milk Way Juiiiiiiiccccccceeeeeeee!!!</h4>
+                    <p>Conheça a primeira casa de suco completamente natural de Arujá. Milk Way chegou pra ficar e trazer: Novidades
+                    para uma alimentação saudável, Qualidade e claro um atendimento sem igual. Venha nos conhecer, e experimentar nossos deliciosos sucos.</p>
                 </div>
                 <div class="clearfix"> </div>
                 </div>
@@ -157,9 +161,9 @@
 </div>
     <!--offer-starts-->
     <div class="offer">
-        <div class="container">
-            <div class="offer-top heading">
-                <h4>Our Best Salads</h4>
+      <div class="container">
+              <!--<div class="offer-top heading">
+                <h4>Os Mais Consumidos</h4>
             </div>
             <div class="offer-bottom">
                 <div class="col-md-3 offer-left">
@@ -199,15 +203,19 @@
                     </div>
                 </div>
                 <div class="clearfix"> </div>
-            </div>
+            </div>-->
         </div>
     </div>
     <!--offer-ends-->
     <!--nature-starts-->
     <div class="nature">
             <div class="nature-top">
-                <h3>Maecenas ornare lobortis</h3>
-                <p>Fruit salad is a dish consisting of various kinds of fruit, sometimes served in a liquid, either in their own juices or a syrup. When served as an appetizer or as a dessert, a fruit salad is sometimes known as a fruit cocktail or fruit cup. In different forms fruit salad can be served as an appetizer, a side-salad, or a dessert.</p>
+             <?php
+                   $resp = getDadosPostInterno('internopromocoeseventos');
+                ?>
+                <h3><?= $resp[0]->post_title;?></h3>
+
+                <p><?= $resp[0]->post_content;?></p>
             </div>
         </div>
     <!--nature-ends-->

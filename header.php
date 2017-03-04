@@ -39,8 +39,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
   ga('send', 'pageview');
 
 </script>
-<!---- start-smoth-scrolling---->
+
 </head>
+
 <body>
     <!----start-header---->
     <div class="header" id="home">
@@ -51,11 +52,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="navigation">
              <span class="menu"></span>
                 <ul class="navig">
-                    <li><a href="<?=home_url();?>">Início</a><span> </span></li>
-                    <li><a href="<?=home_url();?>/sobre">Sobre</a><span> </span></li>
-                    <li><a href="<?=home_url();?>/blog">Blog</a><span> </span></li>
-                    <li><a href="<?=home_url();?>/fotos">Fotos</a><span> </span></li>
-                    <li><a href="<?=home_url();?>/contatos">Contatos</a><span> </span></li>
+                    <li id="inicio"><a href="<?=home_url();?>">Início</a><span> </span></li>
+                    <li id="sobre"><a href="<?=home_url();?>/sobre">Sobre</a><span> </span></li>
+                    <li id="blog"><a href="<?=home_url();?>/blog">Blog</a><span> </span></li>
+                    <li id="fotos"><a href="<?=home_url();?>/fotos">Fotos</a><span> </span></li>
+                    <li id="contatos"><a href="<?=home_url();?>/contatos">Contatos</a><span> </span></li>
                 </ul>
             </div>
                  <!-- script-for-menu -->

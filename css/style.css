@@ -33,13 +33,13 @@ body a:hover{
 	padding: 1.8em 0;
 	position: relative;
 	text-align: center;
-	   background: #EC8D24;
+	   background: #ff6c2c;
 }
 .logo {
   position: absolute;
   top: 0;
   z-index: 999;
-  border: 5px solid#EC8D24;
+  border: 5px solid#ff6c2c;
   border-top: 0;
 }
 .navigation {
@@ -228,7 +228,7 @@ width: 100%;
   margin: 0 auto;
 }
 .bnr-one h3 {
-  color: #EC8D24;
+  color: #ff6c2c;
   font-size: 18px;
   font-weight: 400;
   margin: 12px auto 12px;
@@ -348,7 +348,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 }
 .slit-slider-text h4 {
 	  font-family: 'Enriqueta', serif;
-  color: #EC8D24;
+  color: #ff6c2c;
   font-size: 1.5em;
   font-weight: 400;
   margin: 0px 0 0 0;
@@ -590,7 +590,7 @@ ul.callbacks_tabs.callbacks2_tabs {
 }
 .offer-left h4 a{
 	   font-family: 'Enriqueta', serif;
-	color: #EC8D24;
+	color: #ff6c2c;
 	text-decoration:none;
 }
 .offer-left{
@@ -613,7 +613,7 @@ ul.callbacks_tabs.callbacks2_tabs {
   background: #444;
 }
 .o-btn a:hover {
-	background: #ff8800;
+	background: #ff6c2c;
 	color: #fff;
 	transition: 0.5s all ease;
 	-webkit-transition: 0.5s all ease;
@@ -693,7 +693,7 @@ width: 50%;
   font-weight: 100;
 }
 .footer-grid ul li a:hover{
-	color:#ff8800;
+	color:#ff6c2c;
 }
 .contact-grid ul li{
    font-size: 0.87em;
@@ -750,7 +750,7 @@ ul.social-icons li a:hover{
 }
 .copy {
 	  text-align:center;
-	  background:#ff8800;
+	  background:#ff6c2c ;
 	  padding:1em;
 	 }
 .copy p {
@@ -816,7 +816,7 @@ ul.social-icons li a:hover{
   -o-transition: 0.5s all;
 }
 .submit-btn input[type=submit]:hover {
-  background: #EC8D24;
+  background: #ff6c2c;
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
@@ -899,7 +899,7 @@ h3.typoo{
 }
 .about-left h5 a{
    font-family: 'Enriqueta', serif;
-  color: #EC8D24;
+  color: #ff6c2c;
   text-decoration: none;
   font-size: 1.2em;;
 }
@@ -924,7 +924,7 @@ h3.typoo{
 }
 .ad-left p {
 	color: #fff;
-	background: #EC8D24;
+	background: #ff6c2c;
 	padding: 13px 0px;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
@@ -950,7 +950,7 @@ h3.typoo{
 	  font-size: 1.2em;
 	font-family: 'Josefin Slab', serif;
 	text-decoration:none;
-		color: #EC8D24;
+		color: #ff6c2c;
 }
 .ad-right p {
   color: #000;
@@ -982,7 +982,7 @@ h3.typoo{
 	font-weight: 400;
 }
 .advn-two ul li a:hover{
-	  color: #EC8D24;
+	  color: #ff6c2c;
       margin-left: 10px;
 	transition: 0.5s all ease;
 	-webkit-transition: 0.5s all ease;
@@ -1032,7 +1032,7 @@ h3.typoo{
 /*--about-Part-Ends-Here --*/
 /*--blog-starts--*/
 span.glyphicon {
-  color: #EC8D24;
+  color: #ff6c2c;
 }
 .pager li > a, .pager li > span {
   border-radius: 15px;
@@ -1050,7 +1050,7 @@ span.glyphicon {
   margin-top:.4%;
 }
 .blog-main p a{
-	color:#EC8D24;
+	color:#ff6c2c;
 }
 .blog-main p a:hover{
 	text-decoration:underline;
@@ -1063,7 +1063,7 @@ span.glyphicon {
 }
 a.bg {
     font-family: 'Enriqueta', serif;
-  color: #EC8D24;
+  color: #ff6c2c;
   font-size: 1.4em;
   font-weight: 400;
   text-decoration: none;
@@ -1111,7 +1111,7 @@ a.bg {
 	background: #444;
 }
 .b-btn a:hover{
-	background:#ff8800;
+	background:#ff6c2c;
 	transition: 0.5s all ease;
 	-webkit-transition: 0.5s all ease;
 	-moz-transition: 0.5s all ease;
@@ -1123,7 +1123,7 @@ a.bg {
 }
 .blog-right h3,.blog-right h2{
 	font-family: 'Josefin Slab', serif;
-	color: #EC8D24;
+	color: #ff6c2c;
 	font-size: 1.5em;
 	font-weight: 400;
 }
@@ -1140,7 +1140,7 @@ a.bg {
 	font-size: 15px;
 }
 .blog-right ul li a:hover{
-	color:	#FF8800;
+	color:	#ff6c2c;
 	margin-left: 10px;
 	transition: 0.5s all ease;
 	-webkit-transition: 0.5s all ease;
@@ -1184,7 +1184,7 @@ p.sngl {
 	margin-left: 10px;
 }
 .blog-comments ul li a:hover{
-	color:	#FF8800;
+	color:	#ff6c2c;
 	text-decoration: none;
   	transition: 0.5s all;
   	-webkit-transition: 0.5s all;
@@ -1203,7 +1203,7 @@ p.sngl {
 }
 .related-left h4 {
 	font-family: 'Josefin Slab', serif;
-	color: #ff8800;
+	color: #ff6c2c;
 	font-size: 1.35em;
 	font-weight: 400;
 	margin: 13px 0 0 0;
@@ -1236,7 +1236,7 @@ p.sngl {
   resize: none;
 }
 .contact-form form input[type="submit"]:hover{
-	background: #ff8800;
+	background: #ff6c2c;
 	transition: 0.5s all ease;
 	-webkit-transition: 0.5s all ease;
 	-moz-transition: 0.5s all ease;
@@ -1267,7 +1267,7 @@ p.sngl {
 }
 .media-heading a, .media-heading {
     font-family: 'Enriqueta', serif;
-  color: #EC8D24;
+  color: #ff6c2c;
 }
 .media-body p {
 	font-size: 15px;
@@ -1992,7 +1992,7 @@ h3.ghj {
 	  width: 690px;
 	}
 	ul.navig li a:hover, ul.navig li a.active {
-	  color: #EC8D24;
+	  color: #ff6c2c;
 	}
 	.slit-slider-text h4 {
 	  margin-top: 1.2em;
@@ -2649,7 +2649,7 @@ h3.ghj {
 	left: 5%;
 	  text-align: left;
 	  width: 25%;
-	  border: 3px solid#EC8D24;
+	  border: 3px solid#ff6c2c;
 	}
 	#filters li span {
 		font-size: 9px;

@@ -4,37 +4,32 @@
             <div class="footer-grids">
                 <div class="container">
                     <div class="col-md-3 footer-grid">
-                        <h4>Services</h4>
+                        <h4>Vantagens</h4>
                         <ul>
-                            <li><a href="#">Contact Customer Service</a></li>
-                            <li><a href="#">Free Delivery</a></li>
-                            <li><a href="#">View your Wishlist</a></li>
-                            <li><a href="#">Ring Size Guide</a></li>
-                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Porque tomar suco natural?</a></li>
+                            <li><a href="#">Como preparar um suco nutritivo</a></li>
+                            <li><a href="#">Mitos e Verdades</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 footer-grid">
-                            <h4>Information</h4>
+                            <h4>Informações</h4>
                         <ul>
-                            <li><a href="#">Gift certificates</a></li>
-                            <li><a href="#">Jewellery care guide</a></li>
-                            <li><a href="#">International customers</a></li>
-                            <li><a href="#">Wholesale enquires</a></li>
-                            <li><a href="#">Returns</a></li>
+                            <li><a href="#">Nossos Produtos</a></li>
+                            <li><a href="#">Sacionalidade das Frutas</a></li>
+                            <li><a href="#">Guia Informativo de Frutas</a></li>
+                            <li><a href="#">Parcerias</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 footer-grid">
-                        <h4>More details</h4>
+                        <h4>Mais detalhes</h4>
                         <ul>
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Condition</a></li>
-                            <li><a href="#">Secure payment</a></li>
-                            <li><a href="#">Site map</a></li>
+                            <li><a href="#">Sobre nós</a></li>
+                            <li><a href="#">Política de Privacidade</a></li>
+                            <li><a href="#">Termos e Condições</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 footer-grid contact-grid">
-                        <h4>Contact us</h4>
+                        <h4>Entre em Contato</h4>
                         <ul>
                             <li><span class="c-icon"> </span>Rua Ceará, 135 - Jardim Planalto - Arujá/SP</li>
                             <li><span class="c-icon1"> </span><a href="mailto:contato@mwsucos.com.br">contato@mwsucos.com.br</a></li>

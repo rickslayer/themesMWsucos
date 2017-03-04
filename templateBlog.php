@@ -1,6 +1,10 @@
 <?php /*Template Name: templateBlog*/ ?>
 <?php get_header(); ?>
-
+ <script type="text/javascript">
+    $(function(){
+            $("#blog a").addClass("active");
+    });
+</script>
 <div class="banner banner5" id="home">
 
             </div>
@@ -8,135 +12,119 @@
     <div class="blog">
         <div class="container">
             <div class="blog-head heading">
-                <h3>BLOGS</h3>
+                <h3>BLOG MILK WAY - SUCOS NATURAIS</h3>
             </div>
             <div class="blog-top">
-                <div class="col-md-9 blog-left">
-                    <div class="blog-main">
-                        <a href="single.html" class="bg">DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE</a>
-                        <p>Post by <a href="#">Admin</a> on saturday, March 02, 2015  <a href="#">5 comments</a></p>
-                    </div>
-                    <div class="blog-main-one">
-                        <div class="blog-one">
-                            <div class="col-md-5 blog-one-left">
-                                <a href="single.html"><img src="images/blog-1.jpg" alt="" /></a>
-                            </div>
-                            <div class="col-md-7 blog-one-left">
-                                <p>Nunc quis turpis sed tortor viverra dictum. Etiam in cursus libero, ut cursus turpis. Nulla quis nulla pellentesque, commodo lorem sed ultrices leo. Duis magna mauris, cursus vitae lacus ut consequat malesuada magna. Duis bibendum pellentesque nisi eget volutpat.
-                                     Nunc rhoncus ultrices lectus.Aliquam eu dui quis orci ultrices eleifend ut non massa.
-                                      Duis commodo, ante in vulputate iaculis, libero ex fringilla dolor, id laoreet augue
-                                      lorem in velit. cursus turpis. Nulla quis nulla pellentesque, commodo lorem sed
-                                      ultrices leo. Duis magna mauris, cursus vitae lacus ut consequat malesuada magna.
+               <div class="col-md-9 blog-left">
 
-                                     </p>
-                                <div class="b-btn">
-                                    <a href="single.html">Read more</a>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
+                                <?php
+
+                                    $args = array (
+                                    'post_type'   => 'post',
+                                    'post_status' => 'publish',
+                                    );
+                                    $resp = get_posts($args);
+
+                                   foreach ($resp as $key) {
+                                       $idpost   = $key->ID;
+                                       $iduser   = $key->post_author;
+                                       $conteudo = $key->post_content;
+                                       $conteudo = substr($conteudo, 0,600);
+                                       $titulo   = $key->post_title;
+                                       $titulo   = strtoupper($titulo);
+                                       $link     = get_permalink($idpost);
+                                       $user     = get_user_by('ID', $iduser );
+                                       $categoria = get_the_category($idpost);
+                                       $comentarios = $key->comment_count;
+                                       $dataPublicacao = $key->post_date;
+                                       $dataPublicacao = date("d/m/Y");
+
+                                       ?>
+                        <div class="blog-main">
+                                    <a href="<?=$link ;?>" class="bg"><?= $titulo; ?></a>
+                                       <p><a href="#"><?= $comentarios; ?>  Comentários</a></p>
                         </div>
-                        <div class="blog-comments">
-                                <ul>
-                                    <li><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span><a href="#">Uncategorized</a></li>
-                                    <li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><p>March 13,2014</p></li>
-                                    <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#">Admin</a></li>
-                                </ul>
-                                <div class="clearfix"></div>
-                        </div>
-                    </div>
-                                        <div class="blog-main">
-                        <a href="single.html" class="bg">DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE</a>
-                        <p>Post by <a href="#">Admin</a> on saturday, March 02, 2015  <a href="#">5 comments</a></p>
-                    </div>
-                    <div class="blog-main-one">
+                        <div class="blog-main-one">
                         <div class="blog-one">
                             <div class="col-md-5 blog-one-left">
                                 <a href="single.html"><img src="images/blog-2.jpg" alt="" /></a>
                             </div>
                             <div class="col-md-7 blog-one-left">
-                    <p>Nunc quis turpis sed tortor viverra dictum. Etiam in cursus libero, ut cursus turpis. Nulla quis nulla pellentesque, commodo lorem sed, ultrices leo. Duis magna mauris, cursus vitae lacus ut, consequat malesuada magna. Duis bibendum pellentesque nisi eget volutpat.
-                                     Nunc rhoncus ultrices lectus.Aliquam eu dui quis orci ultrices eleifend ut
-                                      non massa. Duis commodo, ante in vulputate iaculis, libero ex fringilla dolor
-                                      id laoreet augue lorem in velit. cursus turpis. Nulla quis nulla pellentesque
-                                      commodo lorem sed, ultrices leo. Duis magna mauris, cursus vitae lacus ut,
-                                      consequat malesuada magna.
-                                     </p>
+                                   <p> <?= $conteudo; ?> ... </p>
                                 <div class="b-btn">
-                                    <a href="single.html">Read more</a>
+                                    <a href="<?=$link ;?>">Leia Mais...</a>
                                 </div>
                             </div>
                             <div class="clearfix"></div>
                         </div>
                         <div class="blog-comments">
                                 <ul>
-                                    <li><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span><a href="#">Uncategorized</a></li>
-                                    <li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><p>march 13,2014</p></li>
-                                    <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#">Admin</a></li>
+                                    <li><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span><a href="#"><?= $categoria[0]->cat_name; ?></a></li>
+                                    <li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><p><?= $dataPublicacao; ?></p></li>
+                                    <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#"><?= $user->user_nicename; ?></a></li>
                                 </ul>
                                 <div class="clearfix"></div>
                         </div>
                     </div>
-                                        <div class="blog-main">
-                        <a href="single.html" class="bg">DUIS AUTE IRURE DOLOR IN REPREHENDERIT IN VOLUPTATE VELIT ESSE</a>
-                        <p>Post by <a href="#">Admin</a> on saturday, March 02, 2015  <a href="#">5 comments</a></p>
-                    </div>
-                    <div class="blog-main-one">
-                        <div class="blog-one">
-                            <div class="col-md-5 blog-one-left">
-                                <a href="single.html"><img src="images/blog-3.jpg" alt="" /></a>
-                            </div>
-                            <div class="col-md-7 blog-one-left">
-    <p>Nunc quis turpis sed tortor viverra dictum. Etiam in cursus libero, ut cursus turpis. Nulla quis nulla pellentesque, commodo lorem sed, ultrices leo. Duis magna mauris, cursus vitae lacus ut, consequat malesuada magna. Duis bibendum pellentesque nisi eget volutpat.
-                                     Nunc rhoncus ultrices lectus.Aliquam eu dui quis orci ultrices eleifend
-                                     ut non massa. Duis commodo, ante in vulputate iaculis, libero ex fringilla
-                                      dolor, id laoreet augue lorem in velit. cursus turpis. Nulla quis nulla
-                                       pellentesque, commodo lorem sed, ultrices leo. Duis magna mauris,
-                                       cursus vitae lacus ut, consequat malesuada magna.
-                                </p>
-                                <div class="b-btn">
-                                    <a href="single.html">Read more</a>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="blog-comments">
-                                <ul>
-                                    <li><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span><a href="#">Uncategorized</a></li>
-                                    <li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><p>march 13,2014</p></li>
-                                    <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#">Admin</a></li>
-                                </ul>
-                                <div class="clearfix"></div>
-                        </div>
-                    </div>
+
+
+
+                                   <?php }
+
+                                      ?>
+
+
+
                 </div>
                 <div class="col-md-3 blog-right">
                     <div class="categories">
-                        <h2>CATEGORIES</h2>
+                        <h2>CATEGORIAS</h2>
                         <ul>
-                            <li><a href="#">Aenean tortor orci</a></li>
-                            <li><a href="#">Duis bibendum pellentesquev</a></li>
-                            <li><a href="#">Quisque pharetra semper</a></li>
-                            <li><a href="#">Cras condimentum risus</a></li>
-                            <li><a href="#"> Quisque id erat sapien</a></li>
+                        <?php
+                            $args = array(
+                                    'exclude' => 1,
+                                    'title_li' =>'',
+                                    'use_desc_for_title' => 0
+                                              ) ;
+                            $categories = wp_list_categories($args);
+
+?>
                         </ul>
                     </div>
                     <div class="categories">
-                        <h3>RECENT POSTS</h3>
+                        <h3>POSTS RECENTES</h3>
                         <ul>
-                            <li><a href="#">Fusce id volutpat est</a></li>
-                            <li><a href="#">Phasellus condimentum odio</a></li>
-                            <li><a href="#">Donec interdum eros elit</a></li>
-                            <li><a href="#">Cras condimentum risus</a></li>
-                            <li><a href="#">Proin sodales diam ac </a></li>
+                            <?php
+                            $args = array(
+                                    'numberposts' => 5,
+                                    'offset' => 0,
+                                    'category' => 0,
+                                    'orderby' => 'post_date',
+                                    'order' => 'DESC',
+                                    'include' => '',
+                                    'exclude' => '',
+                                    'meta_key' => '',
+                                    'meta_value' =>'',
+                                    'post_type' => 'post',
+                                    'post_status' => 'publish',
+                                    'suppress_filters' => true
+                                );
+
+
+                            $recent_posts = wp_get_recent_posts($args);
+                                foreach ($recent_posts as $key) {
+                                         echo ' <li><a href="'. get_permalink($key["ID"]) .'">'
+                                         . $key["post_title"].' </a></li>' ;
+                                     }
+                                     wp_reset_query();
+                            ?>
+
                         </ul>
                     </div>
                     <div class="categories">
-                        <h3>ARCHIVES</h3>
+                        <h3>OS MAIS VISITADOS</h3>
                         <ul>
-                            <li><a href="#">March 3014</a></li>
-                            <li><a href="#">May 2014</a></li>
-                            <li><a href="#">August 2014</a></li>
-                            <li><a href="#">October 2014</a></li>
+
                         </ul>
                     </div>
                 </div>
@@ -153,44 +141,5 @@
         </div>
     </div>
     <!--blog-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <?php get_footer();?>

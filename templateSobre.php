@@ -1,6 +1,11 @@
 <?php /*Template Name: templateSobre*/ ?>
  <?php $home = get_template_directory_uri(); ?>
  <?php get_header(); ?>
+ <script type="text/javascript">
+    $(function(){
+            $("#sobre a").addClass("active");
+    });
+</script>
 <div class="banner banner5" id="home">
 
             </div>
