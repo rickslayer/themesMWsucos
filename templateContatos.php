@@ -1,13 +1,5 @@
 <?php /*Template Name: templateContatos*/ ?>
 <?php $home = get_template_directory_uri(); ?>
-<?php require_once ('contatos.php');
-
-   $oContato = new contatos();
-    $oContato->Le();
-
-
-
-?>
 <?php get_header(); ?>
     <script src="<?=$home;?>/js/contatos.js"></script>
  <script type="text/javascript">
@@ -36,15 +28,8 @@
                     <p>Dúvidas, reclamações e sugestões nos envie uma mensagem.</p>
                 </div>
                 <div class="col-md-8 contact-right">
-                    <input type="text" id="contatoNome" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Nome';}" />
-                    <input type="text" id="contatoEmail" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" />
-                    <textarea  id="contatoMensagem" value="Message:" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Messagem';}">Messagem..</textarea>
-                    <div class="submit-btn">
-                        <form>
-                            <input type="submit" value="ENVIAR">
-                        </form>
-                    </div>
-                </div>
+                    <?php echo do_shortcode( '[contact-form-7 id="71" title="Contact form 1"]' ); ?>
+               </div>
                 <div class="clearfix"> </div>
             </div>
         </div>

@@ -56,4 +56,5 @@ function strip_shortcode_gallery( $content ) {
 }
 
 
+
 ?>

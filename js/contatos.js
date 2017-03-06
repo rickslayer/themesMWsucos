@@ -1,10 +1,7 @@
 $(function(){
-    var contatoNome  = $("#contatoNome").val();
-    var contatoEmail = $("#contatoEmail").val();
-    var contatoMessagem = $("#contatomensagem").val();
-    var caminho = $("#caminho").val();
-   var url =  caminho + '/contatos.php/Le';
-   console.log(url);
+     $("#contatoNome").attr('placeholder','Nome*');
+     $("#contatoEmail").attr('placeholder','Email*');
+     $("#contatoMensagem").attr('placeholder','Mensagem**');
 
   /*  $("#contatoNome").on("change", function(){
         console.log('teste');

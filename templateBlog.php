@@ -55,6 +55,7 @@
                            $titulo   = strtoupper($titulo);
                            $link     = get_permalink($idPost);
                            $comentarios = $resp[0]->comment_count;
+                           $categoria = get_the_category($idpost);
                            $idUser      = $resp[0]->post_author;
                            $user        = get_user_by('ID', $idUser );
                            $dataPublicacao = $resp[0]->post_date;
@@ -110,8 +111,7 @@
                                     'use_desc_for_title' => 0
                                               ) ;
                             $categories = wp_list_categories($args);
-
-?>
+                            ?>
                         </ul>
                     </div>
                     <div class="categories">

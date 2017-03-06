@@ -1,13 +1,12 @@
 <?php
+
+/*
  require_once ('config.php');
 class contatos
 {
-
-    function __construct()
-    {
-
-    }
-
+    public function  __construct(){
+       die(print_r( 'vamos ver' . $_GET['contatoNome'], true));
+}
     public function Le()
     {
         $id = 40;
@@ -22,13 +21,18 @@ class contatos
         $result = new config();
         $aRet = array();
         $aRet = $result->Executa($SQL);
-        die(print_r($aRet, true));
-        return $aRet;
+        foreach ($aRet as $key) {
+
+            $resp = $key;
+
+
+        }
 
 
     }
 
 
-}
+}*/
 
 ?>
+
