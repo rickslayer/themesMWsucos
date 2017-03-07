@@ -55,6 +55,37 @@ function strip_shortcode_gallery( $content ) {
     return $content;
 }
 
+/*MOSTRAR POSTS RANDOMICOS*/
+function wpb_rand_posts() {
+
+    $args = array(
+        'post_type' => 'post',
+        'orderby'	=> 'rand',
+        'posts_per_page' => 4,
+    );
+
+    $the_query = new WP_Query( $args );
+
+    if ( $the_query->have_posts() ) {
+
+        while ( $the_query->have_posts() ) {
+            $the_query->the_post();
+            $string = "<div class=\"col-md-3 related-left\">            
+                       <a href=\"". get_permalink() . "\">
+                        <img src=\"". get_the_post_thumbnail_url()."\">
+                       <h4>". get_the_title() ."</h4>
+                       </a>
+                       </div>";
+
+        }
+        wp_reset_postdata();
+    } else {
+
+        $string = 'Sem posts encontrados';
+    }
+
+    return $string;
+}
 
 
 ?>

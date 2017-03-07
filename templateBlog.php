@@ -15,22 +15,6 @@
             <div class="blog-top">
                <div class="col-md-9 blog-left">
 
-                                <?php
-/*
-                                       $idpost   = $key->ID;
-                                       $iduser   = $key->post_author;
-                                       $conteudo = $key->post_content;
-                                       $conteudo = substr($conteudo, 0,600);
-                                       $titulo   = $key->post_title;
-                                       $titulo   = strtoupper($titulo);
-                                       $link     = get_permalink($idpost);
-                                       $user     = get_user_by('ID', $iduser );
-                                       $categoria = get_the_category($idpost);
-                                       $comentarios = $key->comment_count;
-                                       $dataPublicacao = $key->post_date;
-                                       $dataPublicacao = date("d/m/Y");
-*/
-                                       ?>
                    <?php
                    $paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
                    $typePost = 'publish';
@@ -48,16 +32,14 @@
                            ?>
                            <?php
                            $idPost   =  get_the_ID();
-                           $resp     = get_posts($idPost);
                            $conteudo = get_the_content();
                            $conteudo = substr($conteudo, 0,600);
                            $titulo   = get_the_title();
                            $titulo   = strtoupper($titulo);
                            $link     = get_permalink($idPost);
-                           $comentarios = $resp[0]->comment_count;
+                           $comentarios = get_comments_number_text();
                            $categoria = get_the_category($idpost);
-                           $idUser      = $resp[0]->post_author;
-                           $user        = get_user_by('ID', $idUser );
+                           $user        = get_the_author();
                            $dataPublicacao = $resp[0]->post_date;
                            $dataPublicacao = date("d/m/Y");
                            ?>
@@ -67,7 +49,7 @@
 
                         <div class="blog-main">
                                     <a href="<?=$link ;?>" class="bg"><?= $titulo; ?></a>
-                                       <p><a href="#"><?= $comentarios; ?>  Comentários</a></p>
+                                       <p><a href="#"><?= $comentarios; ?> </a></p>
                         </div>
                         <div class="blog-main-one">
                         <div class="blog-one">
@@ -85,8 +67,8 @@
                         <div class="blog-comments">
                                 <ul>
                                     <li><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span><a href="#"><?= $categoria[0]->cat_name; ?></a></li>
-                                    <li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><p><?= $dataPublicacao; ?></p></li>
-                                    <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#"><?= $user->user_nicename; ?></a></li>
+                                    <li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><p> </p></li><?= the_date(); ?>
+                                    <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#"><?= $user; ?></a></li>
                                 </ul>
                                 <div class="clearfix"></div>
                         </div>
@@ -145,9 +127,29 @@
                         </ul>
                     </div>
                     <div class="categories">
-                        <h3>OS MAIS VISITADOS</h3>
+                        <h3>TAGS</h3>
                         <ul>
-
+                            <li>
+                            <?php
+                            $args = array(
+                                'smallest'                  => 15,
+                                'largest'                   => 22,
+                                'unit'                      => 'pt',
+                                'number'                    => 45,
+                                'format'                    => 'flat',
+                                'separator'                 => " , ",
+                                'orderby'                   => 'name',
+                                'order'                     => 'ASC',
+                                'exclude'                   => null,
+                                'include'                   => null,
+                                'topic_count_text_callback' => default_topic_count_text,
+                                'link'                      => 'view',
+                                'taxonomy'                  => 'post_tag',
+                                'echo'                      => true,
+                                'child_of'                  => null
+                            );
+                            wp_tag_cloud($args); ?>
+                            </li>
                         </ul>
                     </div>
                 </div>

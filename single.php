@@ -19,36 +19,34 @@
                         ?>
                         <?php
                         $idPost      = get_the_ID();
-                        $resp        = get_posts($idPost);
-                        $idUser      = $resp[0]->post_author;
-                        $user        = get_user_by('ID', $idUser );
+                        $user        = get_the_author();
                         $link        = get_permalink($idPost);
                         $titulo      = get_the_title();
                         $titulo      = strtoupper($titulo);
-                        $comentarios = $resp[0]->comment_count;
+                        $comentarios = get_comments_number_text();
                         $categoria   = get_the_category($idpost);
-                        $dataPublicacao = $resp[0]->post_date;
-                        $dataPublicacao = date("d/m/Y");
+
                         ?>
                        <div class="col-md-9 blog-left">
                          <div class="blog-main">
-                        <a href="single.html" class="bg"><?= $titulo;  ?></a>
-                        <p>Postado por <a href="#" title="usuário"><?=$user->user_nicename;?></a>  <?= the_date(); ?>  <a href="#" title="comentários"><?=$comentarios?> comentários</a></p>
+                        <a href="<?=$link ?>" class="bg"><?= $titulo;  ?></a>
+                        <p>Postado por <a href="#" title="usuário"><?=$user?></a>  <?= the_date(); ?>  <a href="#" title="comentários"><?= $comentarios?></a></p>
                           </div>
                            <div class="blog-main-one">
                                <div class="blog-one">
                                    <?php the_post_thumbnail('medium'); ?>
                                     <p>
-                                       <?php the_content() ?>
+                                       <?php the_content(); ?>
 
                                    </p>
                                </div>
                                <div class="blog-comments">
                                    <ul>
                                        <li><span class="glyphicon glyphicon-bookmark" aria-hidden="true"></span><a href="#" title="categoria"><?= $categoria[0]->cat_name;?></a></li>
-                                       <li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><p title="data da publicação"> <?= $dataPublicacao; ?></p></li>
-                                       <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#" title="usuário"><?=$user->user_nicename;?></a></li>
+                                       <li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><p title="data da publicação"> <?= get_the_date(); ?></p></li>
+                                       <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#" title="usuário"><?=$user?></a></li>
                                    </ul>
+                                   <p><?php the_tags(); ?></p>
                                    <div class="clearfix"></div>
                                </div>
                            </div>
@@ -81,11 +79,11 @@
 
                                <div class="comments-bottom">
                                    <div class="media">
-                                       <div class="media-left">
+                                      <!-- <div class="media-left">
                                            <a href="#">
                                                <img class="media-object" src="images/co.png" alt="" />
                                            </a>
-                                       </div>
+                                       </div>-->
                                        <div class="media-body">
                                             <ol class="commentlist">
                                                <?php
@@ -103,20 +101,20 @@
                                            </ol>
 
 
-                                           ?>
+                                       <!--    <span class="fb-comments-count" data-href=""></span>
                                            <div class="media">
-                                               <div class="media-left">
-                                                   <a href="#">
-                                                       <img class="media-object" src="images/co.png" alt="" />
-                                                   </a>
-                                               </div>
-                                               <div class="media-body">
-                                                   <h4 class="media-heading">Curabitur vitae libero</h4>
-                                                   <p>Phasellus ut ex eu quam interdum ultrices ac congue nunc. Donec ultricies volutpat purus at rutrum. Suspendisse malesuada ligula eu elit aliquet porttitor. Integer ac magna eget lacus venenatis sagittis id vitae massa.</p>
-                                               </div>
-                                           </div>
+                                                   <div class="media-left">
+                                                       <a href="#">
+                                                           <img class="media-object" src="images/co.png" alt="" />
+                                                       </a>
+                                                   </div>
+                                                   <div class="media-body">
+                                                       <h4 class="media-heading">Curabitur vitae libero</h4>
+                                                       <p>Phasellus ut ex eu quam interdum ultrices ac congue nunc. Donec ultricies volutpat purus at rutrum. Suspendisse malesuada ligula eu elit aliquet porttitor. Integer ac magna eget lacus venenatis sagittis id vitae massa.</p>
+                                                   </div>
+                                           </div>-->
                                        </div>
-                                       <div class="media">
+                                      <!-- <div class="media">
                                            <div class="media-left">
                                                <a href="#">
                                                    <img class="media-object" src="images/co.png" alt="">
@@ -127,14 +125,23 @@
                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                                    Duis aute irure dolor in reprehenderit .</p>
                                            </div>
-                                       </div>
+                                       </div>-->
                                    </div>
                                </div>
                            </div>
                            <div class="related">
-                               <h3>RELATED POSTS</h3>
+                               <h3>VEJA TAMBÉM:</h3>
                                <div class="related-bottom">
-                                   <div class="col-md-3 related-left">
+                                <?php
+
+                                echo wpb_rand_posts();
+                                echo wpb_rand_posts();
+                                echo wpb_rand_posts();
+                                echo wpb_rand_posts();
+
+                                ?>
+
+                                  <!-- <div class="col-md-3 related-left">
                                        <img src="images/r-1.jpg" alt="" />
                                        <h4>Cum sociis sere</h4>
                                    </div>
@@ -149,7 +156,7 @@
                                    <div class="col-md-3 related-left">
                                        <img src="images/r-4.jpg" alt="" />
                                        <h4> Aliquam eu quam</h4>
-                                   </div>
+                                   </div>-->
                                    <div class="clearfix"></div>
                                </div>
                            </div>
@@ -199,12 +206,29 @@
                                 </ul>
                             </div>
                             <div class="categories">
-                                <h3>ARCHIVES</h3>
+                                <h3>TAGS</h3>
                                 <ul>
-                                    <li><a href="#">March 3014</a></li>
-                                    <li><a href="#">May 2014</a></li>
-                                    <li><a href="#">August 2014</a></li>
-                                    <li><a href="#">October 2014</a></li>
+                                    <li>
+                                        <?php
+                                        $args = array(
+                                            'smallest'                  => 15,
+                                            'largest'                   => 22,
+                                            'unit'                      => 'pt',
+                                            'number'                    => 45,
+                                            'format'                    => 'flat',
+                                            'separator'                 => " , ",
+                                            'orderby'                   => 'name',
+                                            'order'                     => 'ASC',
+                                            'exclude'                   => null,
+                                            'include'                   => null,
+                                            'topic_count_text_callback' => default_topic_count_text,
+                                            'link'                      => 'view',
+                                            'taxonomy'                  => 'post_tag',
+                                            'echo'                      => true,
+                                            'child_of'                  => null
+                                        );
+                                        wp_tag_cloud($args); ?>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -212,12 +236,6 @@
                         </div>
                         </div>
                         </div>
-
-
-
-
-
-
 
 
 
