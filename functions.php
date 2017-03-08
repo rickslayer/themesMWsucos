@@ -1,5 +1,6 @@
-﻿<?php
+<?php
 add_theme_support('post-thumbnails');
+
 function geraTitle()
     {
       bloginfo(name);
@@ -86,6 +87,16 @@ function wpb_rand_posts() {
 
     return $string;
 }
+function wpa85791_category_posts_per_page( $query ) {
+    if ( $query->is_category() && $query->is_main_query() )
+        $query->set( 'posts_per_page', 5 );
+}
+add_action( 'pre_get_posts', 'wpa85791_category_posts_per_page' );
 
+function tag_posts_per_page($query){
+    if($query->is_tag()&& $query->is_main_query() )
+        $query->set( 'posts_per_page', 5 );
+}
+add_action( 'pre_get_posts', 'tag_posts_per_page' );
 
 ?>

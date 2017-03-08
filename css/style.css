@@ -33,7 +33,8 @@ body a:hover{
 	padding: 1.8em 0;
 	position: relative;
 	text-align: center;
-	   background: #ff6c2c;
+	background: #ff6c2c;
+/*	background: url('/mwsucos/wp-content/themes/themesMWsucos/images/back.png');*/
 }
 .logo {
   position: absolute;

@@ -158,7 +158,7 @@
             <div class="pagination">
                 <nav>
                     <ul class="pager">
-                        <li><?= previous_posts_link( 'Anterior', 5 ); ?></li>
+                        <li><?= previous_posts_link( 'Anterior',$the_query->max_num_pages ); ?></li>
                         <li><?= next_posts_link( 'Próxima', 5 ); ?></li>
                     </ul>
                     <?php

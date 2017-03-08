@@ -46,7 +46,11 @@
                                        <li><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span><p title="data da publicação"> <?= get_the_date(); ?></p></li>
                                        <li><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a href="#" title="usuário"><?=$user?></a></li>
                                    </ul>
-                                   <p><?php the_tags(); ?></p>
+                                   <ul><li>
+                                           <p><?php the_tags(); ?></p>
+                                       </li>
+                                   </ul>
+
                                    <div class="clearfix"></div>
                                </div>
                            </div>
