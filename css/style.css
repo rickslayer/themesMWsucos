@@ -33,8 +33,7 @@ body a:hover{
 	padding: 1.8em 0;
 	position: relative;
 	text-align: center;
-	background: #ff6c2c;
-/*	background: url('/mwsucos/wp-content/themes/themesMWsucos/images/back.png');*/
+	background: url('/mwsucos/wp-content/themes/themesMWsucos/images/bgpatt.png'), repeat-x;
 }
 .logo {
   position: absolute;
@@ -752,7 +751,7 @@ ul.social-icons li a:hover{
 }
 .copy {
 	  text-align:center;
-	  background:#ff6c2c ;
+	  background: url('/mwsucos/wp-content/themes/themesMWsucos/images/bgpatt.png'), repeat-x;
 	  padding:1em;
 	 }
 .copy p {
@@ -781,6 +780,8 @@ ul.social-icons li a:hover{
 .contact-right input[type="text"]:nth-child(1){
 	margin-right:10px;
 }
+.contact-right select,
+.contact-right input[type="email"],
 .contact-right input[type="text"] {
   width: 49%;
   margin: 0px;

@@ -1,6 +1,13 @@
 <?php
 add_theme_support('post-thumbnails');
 
+function getHome()
+{
+    $resp  =  get_template_directory_uri();
+
+    return $resp;
+}
+
 function geraTitle()
     {
       bloginfo(name);
