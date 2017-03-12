@@ -13,11 +13,13 @@
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link rel="stylesheet" type="text/css" href="<?= $home;?>/css/style.css">
+
 <link href="<?= $home;?>/css/bootstrap.css" rel='stylesheet' type='text/css' />
 <link href='http://fonts.googleapis.com/css?family=Enriqueta:400,700' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
 <script src="<?= $home;?>/js/jquery-1.11.0.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?= $home;?>/js/move-top.js"></script>
 <script type="text/javascript" src="<?= $home;?>/js/customJs.js"></script>
 <script type="text/javascript" src="<?= $home;?>/js/easing.js"></script>
@@ -54,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
              <span class="menu"></span>
                 <ul class="navig">
                     <li id="inicio"><a href="<?=home_url();?>">Início</a><span> </span></li>
-                    <li id="invente"><a href="<?=home_url();?>/invente-seu-suco"><em>Invente Seu Suco</em></a><span> </span></li>
+                    <li id="invente"><a href="<?=home_url();?>/invente-seu-suco">Invente Seu Suco</a><span> </span></li>
                     <li id="sobre"><a href="<?=home_url();?>/sobre">Sobre</a><span> </span></li>
                     <li id="blog"><a href="<?=home_url();?>/blog">Blog</a><span> </span></li>
                     <li id="fotos"><a href="<?=home_url();?>/fotos">Fotos</a><span> </span></li>

@@ -106,4 +106,49 @@ function tag_posts_per_page($query){
 }
 add_action( 'pre_get_posts', 'tag_posts_per_page' );
 
+//SELECT PERSONALIZADO
+
+function getViaSelect($args=array()){
+
+    global $wpdb;
+    $tabela = $args['tabela'];
+    $campo  = $args['campo'];
+    $valor  = $args['valor'];
+
+        $cSQL = "SELECT ".$tabela.".*";
+        $cSQL .=  " FROM ".$tabela;
+        $cSQL .= " WHERE " .$tabela.".".$campo;
+        $cSQL .= " IN (";
+            foreach($valor as $value)
+            {
+                 $cSQL .= "'$value '".",";
+            }
+    $cSQL .= "'')";
+
+        $resp = $wpdb->get_results($cSQL, OBJECT);
+
+       return $resp;
+}
+
+function getDados()
+{
+    $teste = $_GET['test'];
+    die(print_r($teste, true));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>

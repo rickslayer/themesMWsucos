@@ -1,35 +1,32 @@
 $(function(){
-
-    $("#comAmor").hide();
-    $("#inventeNome").on("change", function(){
+        $("#inventeNome").on("change", function(){
 
         if ($(this).val().length == 0)
         {
-            $("#descricaoSuco").text('');
+            $("#inventeMensagem").val('');
         }else
         {
-            $("#descricaoSuco").text('Suco Maravilhoso do(a) ' + $(this).val());
+            $("#inventeMensagem").val('Suco Maravilhoso do(a) ' + $(this).val());
         }
     });
 
     $("#inventeBase").on("change", function(){
 
-        $("#comAmor").show();
-        var item = $('<li/>',{
-                        text: $(this).val()
-                        });
 
-        $("#receita").append(item);
+        var mensagem = $("#inventeMensagem").val();
+        $("#inventeMensagem").val(mensagem + '\n' + ' Contém: ' + $(this).val() + ' ;') ;
+
 
     });
     $("#inventeFrutas").on("change", function(){
+        var mensagem = $("#inventeMensagem").val();
 
+        $("#inventeMensagem").val(mensagem + '\n' + ' E Com a fruta: ' + $(this).val() + ' ;') ;
 
-        var item = $('<li/>',{
-            text: $(this).val()
-        });
+    });
 
-        $("#receita").append(item);
+    $("#btnInventar").on("click", function(){
+
 
     });
 });

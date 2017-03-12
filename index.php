@@ -7,6 +7,9 @@
             $("#inicio a").addClass("active");
     });
  </script>
+
+
+
   <div class="banner" id="home">
         <section class="slider">
              <!--   <div class="flexslider">
@@ -103,6 +106,7 @@
 </div>
 <div class="welcome-bottom">
     <div class="container">
+
         <div class="welcome-bottom-info">
                 <div class="col-md-8 slit-slider">
                     <section class="main">
