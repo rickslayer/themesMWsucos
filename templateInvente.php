@@ -1,10 +1,6 @@
 <?php /*Template Name: templateInvente*/ ?>
 <?php get_header(); ?>
-<script type="text/javascript">
-    $(function(){
-        $("#invente a").addClass("active");
-    });
-</script>
+
 <div class="banner banner5" id="home"> </div>
 
 <div class="contact">
@@ -67,4 +63,9 @@
 
 </div>
 <script src="<?= getHome();?>/js/geraSuco.js"></script>
+<script type="text/javascript">
+    jQuery(function($){
+      $("#invente a").addClass("active");
+    });
+</script>
 <?php get_footer(); ?>

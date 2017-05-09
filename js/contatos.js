@@ -1,4 +1,4 @@
-$(function(){
+jQuery(function($){
      $("#contatoNome").attr('placeholder','Nome*');
      $("#contatoEmail").attr('placeholder','Email*');
      $("#contatoMensagem").attr('placeholder','Mensagem**');

@@ -2,17 +2,10 @@
  <?php get_header();?>
 
  <?php $home = get_template_directory_uri(); ?>
- <script type="text/javascript">
-       $(function(){
-            $("#inicio a").addClass("active");
-    });
- </script>
-
-
 
   <div class="banner" id="home">
         <section class="slider">
-             <!--   <div class="flexslider">
+                <!--   <div class="flexslider">
                     <ul class="slides">
                         <li>
                             <div class="banner-top">
@@ -223,6 +216,10 @@
             </div>
         </div>
     <!--nature-ends-->
-
+<script type="text/javascript">
+    jQuery(function($){
+       $("#inicio a").addClass("active");
+    });
+</script>
 <?php get_footer(); ?>
 

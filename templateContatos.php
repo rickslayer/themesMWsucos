@@ -2,11 +2,6 @@
 <?php $home = get_template_directory_uri(); ?>
 <?php get_header(); ?>
     <script src="<?=$home;?>/js/contatos.js"></script>
- <script type="text/javascript">
-    $(function(){
-            $("#contatos a").addClass("active");
-    });
-</script>
     <input type="hidden" id="caminho" value="<?=$home; ?>" />
     <div class="banner banner5" id="home"> </div>
     <!--contact-starts-->
@@ -35,4 +30,9 @@
         </div>
     </div>
     <!----contact-end---->
+    <script type="text/javascript">
+    jQuery(function($){
+      $("#contatos a").addClass("active");
+    });
+</script>
 <?php get_footer() ?>

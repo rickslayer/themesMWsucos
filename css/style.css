@@ -33,7 +33,8 @@ body a:hover{
 	padding: 1.8em 0;
 	position: relative;
 	text-align: center;
-	background: url('/mwsucos/wp-content/themes/themesMWsucos/images/bgpatt.png'), repeat-x;
+	background-color: #f39d1e;
+	/*background: url('/mwsucos/wp-content/themes/themesMWsucos/images/bgpatt.png'), repeat-x;*/
 }
 .logo {
   position: absolute;
@@ -43,8 +44,9 @@ body a:hover{
   border-top: 0;
 }
 .navigation {
-	float: right;
+	float: initial;
 }
+
 ul.navig{
 	padding:0;
 }
@@ -194,7 +196,8 @@ ul.navig li:nth-of-type(3) {
 /*--Header-Part-Ends-Here --*/
 /*--banner-starts--*/
 .banner {
-  background: url(../images/1112.jpg) no-repeat center;
+  /*background: url(../images/1112.jpg) no-repeat center;*/
+	background: url(../images/bgnew.jpg) no-repeat center;
   min-height: 640px;
   background-size: cover;
   -webkit-background-size: cover;
@@ -751,7 +754,8 @@ ul.social-icons li a:hover{
 }
 .copy {
 	  text-align:center;
-	  background: url('/mwsucos/wp-content/themes/themesMWsucos/images/bgpatt.png'), repeat-x;
+	background-color: #f39d1e;
+	  /*background: url('/mwsucos/wp-content/themes/themesMWsucos/images/bgpatt.png'), repeat-x;*/
 	  padding:1em;
 	 }
 .copy p {
@@ -998,6 +1002,7 @@ h3.typoo{
 }
 .banner5 {
   min-height: 88px;
+	background: url(../images/1112.jpg) no-repeat center;
 }
 .ch-grid {
 	margin: 20px 0 0 0;

@@ -1,20 +1,11 @@
 <?php /*Template Name: templateFotos*/ ?>
 <?php get_header(); ?>
 <?php $home = get_template_directory_uri(); ?>
- <script type="text/javascript">
-    $(function(){
-            $("#fotos a").addClass("active");
-    });
-</script>
+
     <!--light-box-files -->
     <script src="<?= $home;?>/js/jquery.chocolat.js"></script>
     <link rel="stylesheet" href="<?= $home;?>/css/chocolat.css" type="text/css" media="screen" charset="utf-8" />
     <!--light-box-files -->
-    <script type="text/javascript" charset="utf-8">
-        $(function() {
-            $('.gallery-bottom a').Chocolat();
-        });
-    </script>
     <div class="banner banner5" id="home">
 
     </div>
@@ -57,6 +48,11 @@
              </div>
          </div>
     </div>
-
+<script type="text/javascript">
+    jQuery(function($){
+          $('.gallery-bottom a').Chocolat();
+        $("#fotos a").addClass("active");
+    });
+</script>
 
 <?php get_footer() ?>

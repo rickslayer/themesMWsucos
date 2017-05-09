@@ -1,16 +1,19 @@
-$(function () {
-    setNavigation();
+jQuery(function ($) {
+$("span.menu").click(function(){
+                    $(" ul.navig").slideToggle("slow" , function(){
+                    });
+                });
+
+
+
+
+ $(".scroll").click(function(event){
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+                });
+
+
+
+     $().UItoTop({ easingType: 'easeOutQuart' });
 });
 
-function setNavigation() {
-    var path = window.location.pathname;
-    path = path.replace(/\/$/, "");
-    path = decodeURIComponent(path);
-
-    $(".nav a").each(function () {
-        var href = $(this).attr('href');
-        if (path.substring(0, href.length) === href) {
-            $(this).closest('li').addClass('active');
-        }
-    });
-}

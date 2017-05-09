@@ -1,10 +1,6 @@
 <?php /*Template Name: templateBlog*/ ?>
 <?php get_header(); ?>
- <script type="text/javascript">
-    $(function(){
-            $("#blog a").addClass("active");
-    });
-</script>
+
 <div class="banner banner5" id="home"> </div>
     <!--blog-->
     <div class="blog">
@@ -169,5 +165,9 @@
         </div>
     </div>
     <!--blog-->
-
+ <script type="text/javascript">
+     jQuery(function($){
+            $("#blog a").addClass("active");
+    });
+</script>
 <?php get_footer();?>

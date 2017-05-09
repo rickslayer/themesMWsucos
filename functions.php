@@ -1,4 +1,6 @@
 <?php
+
+require get_template_directory() . '/core/enqueue.php';
 add_theme_support('post-thumbnails');
 
 function getHome()
@@ -78,7 +80,7 @@ function wpb_rand_posts() {
 
         while ( $the_query->have_posts() ) {
             $the_query->the_post();
-            $string = "<div class=\"col-md-3 related-left\">            
+            $string = "<div class=\"col-md-3 related-left\">
                        <a href=\"". get_permalink() . "\">
                         <img src=\"". get_the_post_thumbnail_url()."\">
                        <h4>". get_the_title() ."</h4>

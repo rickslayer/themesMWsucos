@@ -1,4 +1,4 @@
-$(function(){
+jQuery(function($){
         $("#inventeNome").on("change", function(){
 
         if ($(this).val().length == 0)
